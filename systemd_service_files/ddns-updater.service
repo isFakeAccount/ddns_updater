@@ -9,4 +9,4 @@ ExecStart=%h/.local/share/ddns_updater/main.py
 WorkingDirectory=%h/.local/share/ddns_updater
 
 [Install]
-WantedBy=multi-user.target
+WantedBy=default.target
