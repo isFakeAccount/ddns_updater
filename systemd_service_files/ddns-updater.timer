@@ -3,7 +3,7 @@ Description=Run ddns_updater script every 5 minutes
 
 [Timer]
 OnBootSec=1min
-OnUnitActiveSec=5m
+OnActiveSec=5m
 Unit=ddns-updater.service
 Persistent=true
 
