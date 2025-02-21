@@ -1,7 +1,7 @@
 [Unit]
 Description=Run ddns_updater script every 5 minutes
-Requires=ddns-updater.service
-After=ddns-updater.service
+After=network.target
+Wants=network-online.target
 
 [Timer]
 OnBootSec=1min
