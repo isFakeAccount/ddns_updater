@@ -1,0 +1,11 @@
+[project]
+name = "ddns-updater"
+version = "0.1.0"
+description = "A systemd-based periodic updater for dynamic DNS (DDNS) services."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "platformdirs>=4.3.6",
+    "python-dotenv>=1.0.1",
+    "requests>=2.32.3",
+]

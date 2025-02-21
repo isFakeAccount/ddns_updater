@@ -1,0 +1,13 @@
+[Unit]
+Description=Run ddns_updater script every 5 minutes
+Requires=ddns_updater.service
+After=ddns_updater.service
+
+[Timer]
+OnBootSec=1min
+OnUnitActiveSec=5m
+Unit=ddns_updater.service
+Persistent=true
+
+[Install]
+WantedBy=timers.target

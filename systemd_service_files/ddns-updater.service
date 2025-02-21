@@ -1,0 +1,12 @@
+[Unit]
+Description=Run ddns_updater script
+After=network.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+ExecStart=%h/.local/share/ddns_updater/main.py
+WorkingDirectory=%h/.local/share/ddns_updater
+
+[Install]
+WantedBy=multi-user.target

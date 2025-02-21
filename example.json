@@ -1,0 +1,26 @@
+{
+    "ddns_updater": [
+        {
+            "provider": "<Provider Name>",
+            "update_url": "<Provider Update URL>",
+            "method": "GET",
+            "params": {
+                "key": "value"
+            },
+            "body": {
+                "key": "value"
+            }
+        },
+        {
+            "provider": "<Provider Name>",
+            "update_url": "<Provider Update URL>",
+            "method": "GET",
+            "params": {
+                "key": "value"
+            },
+            "body": {
+                "key": "value"
+            }
+        }
+    ]
+}
