@@ -1,17 +1,16 @@
-#!.venv/bin/python
+#!/usr/bin/env python3
 
 import json
-from pathlib import Path
 from typing import Any
 
 import requests
-from platformdirs import user_config_dir
+from platformdirs import site_config_path
 
 from utils import replace_ip_placeholders
 
 
 def load_config() -> dict[str, Any]:
-    ddns_config_dir = Path(user_config_dir("ddns_updater", appauthor=False))
+    ddns_config_dir = site_config_path("ddns_updater", appauthor=False)
     ddns_config_file = ddns_config_dir / "config.json"
     if not ddns_config_file.exists():
         raise FileNotFoundError(

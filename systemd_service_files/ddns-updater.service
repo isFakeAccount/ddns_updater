@@ -1,12 +1,12 @@
 [Unit]
 Description=Run ddns_updater script
 After=network-online.target
-Wants=network-online.target
 
 [Service]
 Type=oneshot
-ExecStart=%h/.local/share/ddns_updater/main.py
-WorkingDirectory=%h/.local/share/ddns_updater
+ExecStart=/usr/local/bin/ddns-updater
+WorkingDirectory=/usr/local/share/ddns-updater
+Environment="PATH=/usr/local/share/ddns-updater/venv/bin:/usr/local/bin:/usr/bin:/bin"
 
 [Install]
-WantedBy=default.target
+WantedBy=multi-user.target
