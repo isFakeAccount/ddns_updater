@@ -4,7 +4,7 @@ After=network-online.target
 
 [Service]
 Type=oneshot
-ExecStart=/usr/local/bin/main.py
+ExecStart=/usr/local/bin/ddns_updater
 WorkingDirectory=/usr/local/share/ddns_updater
 Environment="PATH=/usr/local/share/ddns_updater/.venv/bin:/usr/local/bin:/usr/bin:/bin"
 
