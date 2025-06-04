@@ -4,10 +4,16 @@ DDNS Updater is a simple, systemd-based utility that periodically updates your d
 
 ## Installation
 
-Clone this repo in ~/.local/share
+Clone this repo in /usr/local/share
 
 ```bash
 git clone https://github.com/isFakeAccount/ddns_updater.git
+```
+
+Change the ownership of the cloned directory by using this cmd
+
+```bash
+sudo chown -R $USER: ddns_updater
 ```
 
 ## Features
@@ -15,7 +21,7 @@ git clone https://github.com/isFakeAccount/ddns_updater.git
 - Supports multiple DDNS providers via a JSON-based configuration.
 
 ## Configuration
-Create a configuration file at `~/.config/ddns_update/config.json` with the following format:
+Create a configuration file at `/etc/xdg/ddns_update/config.json` with the following format:
 
 ```json
 {
